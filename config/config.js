@@ -1,14 +1,14 @@
-{
+module.exports = {
   "development": {
     "username": "root",
-    "password": "California",
+    "password": process.env.DBPASSWORD,
     "database": "storydb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "California",
+    "password": process.env.DBPASSWORD,
     "database": "storydb",
     "host": "localhost",
     "dialect": "mysql",
