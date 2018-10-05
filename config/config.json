@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "California",
-    // "database": "exampledb",
+    "database": "storydb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "California",
-    "database": "testdb",
+    "database": "storydb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
