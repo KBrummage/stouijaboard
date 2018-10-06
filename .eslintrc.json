@@ -28,7 +28,7 @@
         ],
         "linebreak-style": [
             "error",
-            "CRLF"
+            "unix"
         ],
         "quotes": [
             "error",
