@@ -2,38 +2,23 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get most recent (default setting)
-  app.get("/api/stories/", function(req, res) {
-    db.Story.findAll({
-      include: [db.Entries],
-      limit: 100,
-      order: [["createdAt", "DESC"]]
-    }).then(function(dbStory) {
+  app.get("/api/entries", function(req, res) {
+    db.Entries.findAll({}).then(function(data) {
       var hbsObject = {
-        stories: dbStory
+        entries: data
       };
+      console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
 
   // // Get most popular
-  // app.get("/api/stories", function(req, res) {
-  //   db.Story.findOne({}).then(function() {
-
-  //   });
-  // });
 
   // // Find a specific author
 
-  // // Find a specific genre
-  // app.get("/api/stories/:genre", function(req, res) {
-  //   db.Story.findAll({}).then(function() {
-
-  //   });
-  // });
-
   // Create a new story
-  app.post("/api/stories", function(req, res) {
-    db.Story.create({
+  app.post("/api/entries", function(req, res) {
+    db.Entries.create({
       title: req.body.title,
       author: req.body.author,
       entry: req.body.entry
@@ -41,11 +26,4 @@ module.exports = function(app) {
       res.json({ id: dbStory.insertId });
     });
   });
-
-  // Delete a story (administrator access only)
-  // app.delete("/api/stories/:id", function(req, res) {
-  //   db.Story.destroy({ where: { id: req.params.id } }).then(function(dbStory) {
-  //     res.json(dbStory);
-  //   });
-  // });
 };

@@ -44,34 +44,39 @@
   <h2>Welcome To StouijiBoard!</h2>
       
 <hr>
-
-  <div class="card">
-    
-  </div>
+  
   <div>
     <div class="card">
-      <div class="card-header">
+      <ul>
+        {{#each entries}}
+          {{> entries/story-block}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="card">
+      <ul>
+        <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh
-          eleifend, eu pharetra
-          lectus tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem
-          ultricies vel. Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices
-          purus,
-          eget venenatis diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor
-          feugiat
-          eu. Sed ut porttitor dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo.
-          Proin commodo, nisl eget pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam
-          fermentum quam ac ex venenatis, ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra.
-          Donec vestibulum ante et massa varius, ut auctor diam scelerisque.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh
+            eleifend, eu pharetra
+            lectus tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem
+            ultricies vel. Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices
+            purus,
+            eget venenatis diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor
+            feugiat
+            eu. Sed ut porttitor dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo.
+            Proin commodo, nisl eget pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam
+            fermentum quam ac ex venenatis, ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra.
+            Donec vestibulum ante et massa varius, ut auctor diam scelerisque.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </ul>
     </div>
     <div>
       <p>
-
         Ut iaculis sollicitudin tincidunt. Donec posuere orci id sollicitudin imperdiet. Pellentesque habitant morbi
         tristique senectus et netus et malesuada fames ac turpis egestas. Duis nunc felis, condimentum nec elit
         malesuada, rhoncus scelerisque felis. Integer imperdiet orci vitae metus tempus, ut pretium nunc gravida.
@@ -111,20 +116,7 @@
         </p>
     </div>
   </div>
-
-
 </div>
-<div>
-       <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
 
 {{!-- New Story Modal --}}
 <br>
@@ -145,7 +137,7 @@
                   <!-- ++++++++++++++++++++++++++++++++++++++++ -->
                   <h1>{{msg}}</h1>
                   <h6>Click the prompt to generate the title/starting point for your story.</h6>
-                  <form class="clearfix mb-4" action="POST">
+                  <form class="clearfix mb-4" action="POST" id="storyForm">
                     <div class="form-group">
                       <form>
                           <div class="form-group">
@@ -167,9 +159,9 @@
                     <br>
                     <h6>Begin your story!</h6>
                     <div class="form-group">
-                      <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+                      <textarea class="form-control" id="storyText" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
                     </div>
-                    <button id="submit" class="btn btn-primary float-right">Submit</button>
+                    <button type="submit" id="newSubmit" class="btn btn-primary float-right">Submit</button>
                   </form>
                 </div>
                 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
@@ -207,11 +199,11 @@
             <form class="login">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="email-input" placeholder="Email">
+                    <input type="email" class="form-control" id="emailInput" placeholder="Email">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="password-input" placeholder="Password">
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Password">
                 </div>
                 <div class="checkbox">
                     <label>
