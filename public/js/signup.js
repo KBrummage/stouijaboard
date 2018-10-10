@@ -29,7 +29,8 @@ $(document).ready(function() {
       password: password
     })
       .then(function(data) {
-        window.location.replace(data);
+        console.log("You have been added");
+        location.reload();
         // If there's an error, handle it by throwing up a bootstrap alert
         console.log(data);
       })
