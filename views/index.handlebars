@@ -1,297 +1,317 @@
 <!--Nav Bar-->
-  <div id="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
-      <a class="navbar-brand" href="/">Stouiji Board</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<div id="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
+    <a class="navbar-brand" href="/">Stouiji Board</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <button class="btn btn-link pull-right" data-target="#storyModal" data-toggle="modal" style="color: gray">New Story</button>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Sort By...
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Most Recent</a>
-              <a class="dropdown-item" href="#">Most Active</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <button class="btn btn-link pull-right" data-target="#storyModal" data-toggle="modal" style="color: gray">New Story</button>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Sort By...
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Most Recent</a>
+            <a class="dropdown-item" href="#">Most Active</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
 
 
-        <div class="form horiz">
-          <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#loginModal" data-toggle="modal" id="loginBtn">Login</button>
-          <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#signupModal" data-toggle="modal" id="signUpBtn">Sign Up!</button>
-        </div>
+      <div class="form horiz">
+        <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#loginModal" data-toggle="modal"
+          id="loginBtn">Login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#signupModal" data-toggle="modal"
+          id="signUpBtn">Sign Up!</button>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+</div>
 
-  <!--Ouiji Board Graphic-->
-  <div class="container ouiji" style="margin-left: 8%">
-    <div class="module parallax" id="module"></div>
+<!--Ouiji Board Graphic-->
+<div class="ouiji">
+
+  <div class="module" id="module">
+    <div class="headline">Stouiji Board</div>
+
   </div>
-<div>
+</div>
+<div class="chalkboard">
   <!-- <h1>{{msg}}</h1> -->
   <h2>Welcome To StouijiBoard!</h2>
-      
-<hr>
-  
-  <div>
-    <div class="card">
-      <ul>
-        {{#each entries}}
-          {{> entries/story-block}}
-        {{/each}}
-      </ul>
-    </div>
-    <div class="card">
-      <ul>
-        <div class="card-header">
-        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
-        </div>
-        <div class="card-body">
-          <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh
-            eleifend, eu pharetra
-            lectus tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem
-            ultricies vel. Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices
-            purus,
-            eget venenatis diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor
-            feugiat
-            eu. Sed ut porttitor dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo.
-            Proin commodo, nisl eget pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam
-            fermentum quam ac ex venenatis, ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra.
-            Donec vestibulum ante et massa varius, ut auctor diam scelerisque.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </ul>
-    </div>
-    <div>
-      <p>
-        Ut iaculis sollicitudin tincidunt. Donec posuere orci id sollicitudin imperdiet. Pellentesque habitant morbi
-        tristique senectus et netus et malesuada fames ac turpis egestas. Duis nunc felis, condimentum nec elit
-        malesuada, rhoncus scelerisque felis. Integer imperdiet orci vitae metus tempus, ut pretium nunc gravida.
-        Donec
-        tempus vulputate massa, vel mollis purus tristique in. Phasellus varius feugiat nunc. Aenean non quam ac est
-        condimentum efficitur. Phasellus dapibus eget urna sollicitudin tincidunt.
 
-        Vivamus vestibulum metus egestas, feugiat purus quis, tristique magna. Donec iaculis interdum nulla, id
-        consequat ex ornare at. Praesent finibus justo ut leo tincidunt, quis interdum turpis fermentum. Vestibulum
-        pretium eros bibendum, bibendum nisi in, dictum mi. In a leo blandit eros ultrices convallis. Vivamus in
-        purus
-        ac ipsum eleifend dapibus. Curabitur condimentum magna in vehicula cursus. Aenean ac purus eget tortor ornare
-        cursus. Mauris faucibus varius nibh.
+  <hr>
 
-        Etiam in risus tincidunt, gravida dui quis, ornare urna. Proin id massa ac leo sagittis euismod. Nunc nec
-        felis
-        ut mi vulputate tincidunt sed ac dolor. Praesent a velit orci. Proin eget lobortis lacus. Donec euismod augue
-        eu viverra scelerisque. Fusce et nunc nec ante vehicula fringilla. Sed convallis, tortor nec placerat auctor,
-        dolor nisi luctus elit, quis commodo leo diam vitae quam. Morbi molestie quam vel neque pulvinar luctus.
 
-        Fusce ac mi auctor neque fermentum pellentesque. Pellentesque enim tellus, sagittis vitae volutpat ut,
-        aliquam
-        quis felis. Suspendisse eget mi sem. Nam quam magna, imperdiet ut iaculis vel, porta eget justo. Aenean
-        aliquam
-        semper lorem, sit amet tempus massa tempus eget. Phasellus iaculis euismod scelerisque. Donec vitae nisi
-        dictum, facilisis urna eu, tempor ante. Pellentesque nec viverra sem, id accumsan ligula. Maecenas odio orci,
-        euismod eget porta quis, congue et lacus. Pellentesque maximus feugiat magna, pellentesque interdum lorem
-        fermentum et. Maecenas elementum feugiat velit non lobortis. Orci varius natoque penatibus et magnis dis
-        parturient montes, nascetur ridiculus mus. Cras eget nibh sit amet turpis tincidunt ultrices.
-
-        Cras porttitor nisl eros, eu ultricies risus congue sed. Sed vel mi laoreet, gravida quam sit amet, dictum
-        nibh. Donec lobortis augue quis orci fringilla, non laoreet sem convallis. Proin pharetra libero ligula, quis
-        gravida nisi placerat in. Sed bibendum, purus et euismod sagittis, ante dolor rutrum dui, in elementum ante
-        nibh non lacus. Suspendisse elit nunc, porta non finibus ac, venenatis quis nisl. Suspendisse nec ipsum non
-        ligula interdum volutpat sed iaculis turpis. Curabitur varius posuere tellus eget lacinia. Vivamus gravida
-        velit a turpis interdum interdum. Aliquam euismod libero sit amet leo semper, vitae sodales odio bibendum.
-        </p>
-    </div>
+  <div class="card">
+    <ul>
+      {{#each entries}} {{> entries/story-block}} {{/each}}
+    </ul>
   </div>
+  <div class="card">
+    <ul>
+      <div class="card-header">
+        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
+          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
+          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
+          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
+          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
+          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
+          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
+          ut auctor diam scelerisque.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </ul>
+  </div>
+  <div class="card">
+    <ul>
+      <div class="card-header">
+        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
+          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
+          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
+          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
+          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
+          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
+          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
+          ut auctor diam scelerisque.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </ul>
+  </div>
+  <div class="card">
+    <ul>
+      <div class="card-header">
+        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
+          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
+          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
+          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
+          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
+          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
+          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
+          ut auctor diam scelerisque.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </ul>
+  </div>
+  <div class="card">
+    <ul>
+      <div class="card-header">
+        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
+          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
+          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
+          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
+          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
+          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
+          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
+          ut auctor diam scelerisque.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </ul>
+  </div>
+
+
 </div>
 
 {{!-- New Story Modal --}}
 <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="modal fade" data-keyboard="false" data-backdrop="static" id="storyModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" modal-lg role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">New Story</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="col-12">
-                  <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-                  <h1>{{msg}}</h1>
-                  <h6>Click the prompt to generate the title/starting point for your story.</h6>
-                  <form class="clearfix mb-4" action="POST" id="storyForm">
-                    <div class="form-group">
-                      <form>
-                          <div class="form-group">
-                            <textarea type="text" class="form-control" id="rndmPrmptFld" cols="80" rows="2" placeholder="Prompt"></textarea>
-                          </div>
-                          <button type="submit" class="btn btn-primary" id="randomGen">Generate Random Prompt</button>
-                      </form>
-                    </div>
-                    <div class="setRules">
-                      <h6>Set the contribution rule for your story:</h6>
-                        <div>
-                            <select class="form-control form-control-lg" id="questionOne">
-                                <option value=0></option>
-                                <option value=1>One word at a time.</option>
-                                <option value=2>One sentence at a time.</option>
-                            </select>
-                        </div>
-                    </div>
-                    <br>
-                    <h6>Begin your story!</h6>
-                    <div class="form-group">
-                      <textarea class="form-control" id="storyText" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-                    </div>
-                    <button type="submit" id="newSubmit" class="btn btn-primary float-right">Submit</button>
-                  </form>
-                </div>
-                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="modal fade" data-keyboard="false" data-backdrop="static" id="storyModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" modal-lg role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">New Story</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            <div class="modal-body">
+              <div class="col-12">
+                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+                <h1>{{msg}}</h1>
+                <h6>Click the prompt to generate the title/starting point for your story.</h6>
+                <form class="clearfix mb-4" action="POST" id="storyForm">
+                  <div class="form-group">
+                    <form>
+                      <div class="form-group">
+                        <textarea type="text" class="form-control" id="rndmPrmptFld" cols="80" rows="2" placeholder="Prompt"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="randomGen">Generate Random Prompt</button>
+                    </form>
+                  </div>
+                  <div class="setRules">
+                    <h6>Set the contribution rule for your story:</h6>
+                    <div class="form-group">
+                      <select class="form-control form-control-lg" id="questionOne">
+                        <option selected>Choose a word contribution limit</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                  <h6>Begin your story!</h6>
+                  <div class="form-group">
+                    <textarea class="form-control" id="storyText" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+                    <div id="wordCount" style="display:none"></div>
+                  </div>
+                  <button type="submit" id="newSubmit" class="btn btn-primary float-right">Submit</button>
+                </form>
+              </div>
+              <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            </div>
+            
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  {{!-- Sign In Modal --}}
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="modal fade" data-keyboard="false" data-backdrop="static" id="loginModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" modal-lg role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Sign In</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="col-12">
-                  <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-                  <h3>Please Login</h3>
-            <br>
-            <form class="login">
-                <div class="form-group">
+</div>
+
+{{!-- Sign In Modal --}}
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="modal fade" data-keyboard="false" data-backdrop="static" id="loginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" modal-lg role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign In</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="col-12">
+                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+                <h3>Please Login</h3>
+                <br>
+                <form class="login">
+                  <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="emailInput" placeholder="Email">
-                </div>
-                <div class="form-group">
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="passwordInput" placeholder="Password">
-                </div>
-                <div class="checkbox">
+                  </div>
+                  <div class="checkbox">
                     <label>
-                        <input type="checkbox">
-                        Remember Me
+                      <input type="checkbox"> Remember Me
                     </label>
-                </div>
-                <button type="submit" class="btn btn-primary form-control">Login</button>
-            </form>
-            <br>
-            <p>Or sign up <a href="/">here</a></p>
-                  </form>
-                </div>
-                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+                  </div>
+                  <button type="submit" class="btn btn-primary form-control">Login</button>
+                </form>
+                <br>
+                <p>Or sign up
+                  <a href="/">here</a>
+                </p>
+                </form>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
+              <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 {{!-- Sign Up Modal --}}
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="modal fade" data-keyboard="false" data-backdrop="static" id="signupModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" modal-lg role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Sign Up</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="col-12">
-                  <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-                  <h3>Sign Up Form</h3>
-            <br>
-            <form class="signup">
-                <div class="form-group">
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="modal fade" data-keyboard="false" data-backdrop="static" id="signupModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" modal-lg role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign Up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="col-12">
+                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+                <h3>Sign Up Form</h3>
+                <br>
+                <form class="signup">
+                  <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="email-input" placeholder="Email">
-                </div>
-                <div class="form-group">
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="password-input" placeholder="Password">
-                </div>
-                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                  </div>
+                  <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error:</span> <span class="msg"></span>
-                </div>
-                <div class="checkbox">
+                    <span class="sr-only">Error:</span>
+                    <span class="msg"></span>
+                  </div>
+                  <div class="checkbox">
                     <label>
-                        <input type="checkbox">
-                        Remember Me
+                      <input type="checkbox"> Remember Me
                     </label>
-                </div>
-                <button type="submit" class="btn btn-primary form-control">Sign Up</button>
-                  </form>
-                  <br>
-            <p>Or log in <a href="/">here</a></p>
-                </div>
-                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+                  </div>
+                  <button type="submit" class="btn btn-primary form-control">Sign Up</button>
+                </form>
+                <br>
+                <p>Or log in
+                  <a href="/">here</a>
+                </p>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
+              <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  {{!-- Script for Modals --}}
-  <script>
-    $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    })
-  </script>
+{{!-- Script for Modals --}}
+<script>
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+</script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
