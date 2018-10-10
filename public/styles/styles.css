@@ -10,9 +10,19 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 300vh;
     margin: 0;
-  
+  }
+
+  .chalkboard{
+    background: rgba(246, 246, 246, .2);
+    
+  }
+
+  .card{
+    display: flex;
+    margin: 4%;
+    padding: 0 0 2% 0;
   }
   .container{
     display: flex;
@@ -31,23 +41,32 @@
   .fixed{
     position: fixed;
     width: 100%;
+    z-index: 2;
   }
   
-  
+  .headline{
+    color: white;
+    z-index: 3;
+  }
   h1{
-    background-image: url("/assets/OuijiBoard.jpeg")
+    background-image: url("/assets/OuijiBoard.jpg")
   }
   
   
   .module {
     display: flex;
     color: red;
-    flex-grow: 1;
-    /* width: 100vw; */
-    min-height: 50vh;
-    width: 100vw!important;
-    background-image: url("/assets/OuijiBoard.jpeg");
+    /* flex-grow: 1; */
+    width: 100vw;
+    min-height: 80vh;
+    background-image: url("/assets/OuijiBoard.jpg");
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     align-self: center;
+
   }
+
+ 
