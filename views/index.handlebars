@@ -52,11 +52,21 @@
   <hr>
 
 
-  <div class="card">
-    <ul>
-      {{#each entries}} {{> entries/story-block}} {{/each}}
-    </ul>
-  </div>
+  
+    <div id="renderCard" class="card">
+      {{#each entries}}
+      <div class="card-header">
+        Created by: {{email}}, created on: {{createdAt}}, last contributed: {{updatedAt}}
+      </div>
+      <div id="renderCard" class="card-body">
+            <h4 class="card-title">{{title}}</h4>
+            <p class="card-text">{{entry}}</p>
+            <p class="contStory"></p>
+            <a href="#" class="btn btn-primary">Contribute to Story</a>
+      </div>
+      {{/each}}
+      <br>
+    </div>
   <div class="card">
     <ul>
       <div class="card-header">
