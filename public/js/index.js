@@ -1,7 +1,6 @@
 $(function() {
   $("#newSubmit").on("click", function(event) {
     event.preventDefault();
-
     var newTitle = $("#rndmPrmptFld")
       .val()
       .trim();
