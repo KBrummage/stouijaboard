@@ -11,7 +11,7 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
-
+    console.log(userData);
     if (!userData.email || !userData.password) {
       return; //add error message alert
     }
@@ -29,8 +29,9 @@ $(document).ready(function() {
       password: password
     })
       .then(function(data) {
-        window.location.replace(data);
+     //   window.location.replace(data);
         // If there's an error, handle it by throwing up a bootstrap alert
+        console.log(data);
       })
       .catch(handleLoginErr);
   }
