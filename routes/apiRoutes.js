@@ -12,9 +12,19 @@ module.exports = function(app) {
     });
   });
 
-  // // Get most popular
+  // Create a new user
+  app.post("/api/signup", function(req, res) {
+    db.Users.create({
+      email: req.body.email,
+      password: req.body.password
+    }).then(function(dbStory) {
+      res.json({ id: dbStory.insertId });
+    });
+  });
 
-  // // Find a specific author
+  // Get most popular
+
+  // Find a specific author
 
   // Create a new story
   app.post("/api/entries", function(req, res) {
