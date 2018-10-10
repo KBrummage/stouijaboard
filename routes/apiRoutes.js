@@ -2,13 +2,20 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get most recent (default setting)
-  app.get("/api/entries", function(req, res) {
-    db.Entries.findAll({}).then(function(data) {
+  app.get("/", function(req, res) {
+    var query = {};
+    if (req.query.user_id) {
+      query.UserId = req.query.user_id;
+    }
+    db.Entries.findAll({
+      include: [db.User],
+      where: query
+    }).then(function(data) {
       var hbsObject = {
         entries: data
       };
-      console.log(hbsObject);
       res.render("index", hbsObject);
+      // console.log(hbsObject);
     });
   });
 

@@ -1,5 +1,12 @@
-CREATE DATABASE storydb;
+DROP DATABASE IF EXISTS storydb;
 
+CREATE DATABASE storydb;
 USE storydb;
 
+DROP DATABASE IF EXISTS testdb;
+CREATE DATABASE testdb;
+USE testdb;
+
 SELECT * FROM entries;
+
+SELECT * FROM users;
