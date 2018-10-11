@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
   var loginForm = $("form.login");
-  var emailInput = $("input#email-input");
-  var passwordInput = $("input#password-input");
+  var emailInput = $("input#emailInput");
+  var passwordInput = $("input#passwordInput");
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", function(event) {
@@ -28,8 +28,25 @@ $(document).ready(function() {
       email: email,
       password: password
     })
-      .then(function(data) {
-        window.location.replace(data);
+      .then(function() {
+        //  window.location.replace(data);
+        // Put this code after user first log in
+
+        $(window).load(function() {
+          sessionStorage.setItem("status", "loggedIn");
+        });
+
+        // When ever user clicks a link you can check like
+
+        if (sessionStorage.getItem("status") !== null) {
+          //redirect to page
+          console.log("you are logged in");
+        } else {
+          //show validation message
+          console.log("you are not logged in");
+        }
+        console.log("You are logged in");
+        location.reload();
         // If there's an error, log the error
       })
       .catch(function(err) {

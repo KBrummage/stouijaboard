@@ -218,26 +218,26 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="passwordInput" placeholder="Password">
-                  </div>
-                  <div class="checkbox">
+                    <input type="password" autocomplet="current-password" class="form-control" id="passwordInput" placeholder="Password">
+                </div>
+                <!--<div class="checkbox">
                     <label>
                       <input type="checkbox"> Remember Me
                     </label>
-                  </div>
+                  </div>-->
                   <button type="submit" class="btn btn-primary form-control">Login</button>
                 </form>
                 <br>
-                <p>Or sign up
+                <!--<p>Or sign up
                   <a href="/">here</a>
-                </p>
+                </p>-->
                 </form>
               </div>
               <!-- ++++++++++++++++++++++++++++++++++++++++ -->
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
           </div>
         </div>
@@ -269,35 +269,38 @@
                 <form class="signup">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="email-input" placeholder="Email">
-                  </div>
-                  <div class="form-group">
+                    <input type="email" class="form-control" id="newUserEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="password-input" placeholder="Password">
-                  </div>
-                  <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                    <input type="password" autocomplete="new-password" class="form-control" id="newUserPassword" placeholder="Password">
+                </div>
+                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error:</span>
-                    <span class="msg"></span>
-                  </div>
-                  <div class="checkbox">
+                    <span class="sr-only">Error:</span> <span class="msg"></span>
+                </div>
+                <!--<div class="checkbox">
                     <label>
                       <input type="checkbox"> Remember Me
                     </label>
-                  </div>
-                  <button type="submit" class="btn btn-primary form-control">Sign Up</button>
-                </form>
-                <br>
-                <p>Or log in
-                  <a href="/">here</a>
-                </p>
+                </div>-->
+                <button type="submit" class="btn btn-primary form-control">Sign Up</button>
+                  </form>
+                  <br>
+            <!--<p>Or log in <a href="/">here</a></p>-->
+                </div>
+                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
               </div>
               <!-- ++++++++++++++++++++++++++++++++++++++++ -->
             </div>
-            <div class="modal-footer">
+            <!--<div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -314,3 +317,5 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/signup.js"></script>
+<script src="/js/login.js"></script>
