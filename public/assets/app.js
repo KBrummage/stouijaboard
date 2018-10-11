@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $("#questionOne").append(`<option class="limitChoice" value="1">1 word limit</option>`)
     for (var i = 5; i < 26; i = i + 5) {
         $("#questionOne").append(`<option class="limitChoice" value="${i}">${i} word limit</option>`);
@@ -14,6 +15,7 @@ $(document).ready(function () {
     }
 
     const el = document.querySelector("#module");
+
 
     el.addEventListener("mousemove", (e) => {
         el.style.backgroundPositionX = -e.offsetX / 100 + "px";
@@ -45,6 +47,9 @@ $(document).ready(function () {
         })
 
 
+
     })
+
+   
 
 })
