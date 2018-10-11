@@ -70,7 +70,9 @@
     background-image: url("/assets/OuijiBoard.jpg")
   }
   
-  
+  #questionOne, #rndmPrmptFld, #storyText{
+    font-family: 'Alice', serif;
+  }
   .module {
     display: flex;
     color: red;

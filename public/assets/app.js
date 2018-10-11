@@ -38,7 +38,7 @@ $(document).ready(function () {
     $(document).on("click", "#randomGen", function (e) {
         e.preventDefault();
         $.ajax({
-            url: "https://www.ineedaprompt.com/dictionary/default/prompt?q=adj+noun+adv+verb+noun+location",
+            url: "https://www.ineedaprompt.com/dictionary/default/prompt?q=adj+noun+verb",
             method: "GET"
         }).then(function (response) {
             console.log(response.english);
