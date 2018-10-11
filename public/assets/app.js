@@ -16,7 +16,7 @@ $(document).ready(function () {
     const el = document.querySelector("#module");
 
     el.addEventListener("mousemove", (e) => {
-        el.style.backgroundPositionX = -e.offsetX / 10 + "px";
+        el.style.backgroundPositionX = -e.offsetX / 100 + "px";
         el.style.backgroundPositionY = -e.offsetY / 50 + "px";
     });
 
