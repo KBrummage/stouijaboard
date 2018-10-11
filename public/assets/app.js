@@ -32,23 +32,6 @@ $(document).ready(function () {
 
     })
 
-    //select word limit
-
-
-
-
-//random quote generator
-$(document).on("click", "#randomGen", function (e) {
-    e.preventDefault();
-    $.ajax({
-        url: "https://www.ineedaprompt.com/dictionary/default/prompt?q=adj+noun+adv+verb+noun+location",
-        method: "GET"
-    }).then(function (response) {
-        console.log(response.english);
-        $("#rndmPrmptFld").val("");
-        $("#rndmPrmptFld").val(response.english);
-    })
-
     //random quote generator
     $(document).on("click", "#randomGen", function (e) {
         e.preventDefault();
@@ -60,27 +43,8 @@ $(document).on("click", "#randomGen", function (e) {
             $("#rndmPrmptFld").val("");
             $("#rndmPrmptFld").val(response.english);
         })
+
+
     })
-
-
-    $("#storyText").on('keyup', function (e) {
-        e.preventDefault();
-
-$("#storyText").on('keyup', function (e) {
-e.preventDefault();
-
-var words = this.value.match(/\S+/g).length;
-
-if (words > word) {
-    // Split the string on first 200 words and rejoin on spaces
-    var trimmed = $(this).val().split(/\s+/, 200).join(" ");
-    // Add a space at the end to make sure more typing creates new words
-    $(this).val(trimmed + " ");
-} else {
-    $('#display_count').text(words);
-    $('#wordCount').text(`${200-words} left`);
-}
-});
-
 
 })
