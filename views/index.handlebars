@@ -18,10 +18,11 @@
             Sort By...
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Most Recent</a>
-            <a class="dropdown-item" href="#">Most Active</a>
+            <a class="dropdown-item" id="recent" href="#">Most Recent</a>
+            <a class="dropdown-item" id="active" href="#">Most Active</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" id="favorites" href="#">My Favorites</a>
+            <a class="dropdown-item" id="myPosts" href="#">My Posts</a>
           </div>
         </li>
       </ul>
@@ -41,24 +42,22 @@
 <div class="ouiji">
 
   <div class="module" id="module">
-    <div class="headline">Stouiji Board</div>
+    {{!-- <div class="headline">Stouiji Board</div> --}}
 
   </div>
 </div>
 <div class="chalkboard">
   <!-- <h1>{{msg}}</h1> -->
-  <h2>Welcome To StouijiBoard!</h2>
+  <h2>Welcome To StouijiBoard</h2>
 
   <hr>
 
 
   <div class="card">
-    <ul>
       {{#each entries}} {{> entries/story-block}} {{/each}}
-    </ul>
   </div>
   <div class="card">
-    <ul>
+
       <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
       </div>
@@ -74,10 +73,10 @@
           ut auctor diam scelerisque.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-    </ul>
+
   </div>
   <div class="card">
-    <ul>
+
       <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
       </div>
@@ -93,10 +92,10 @@
           ut auctor diam scelerisque.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-    </ul>
+
   </div>
   <div class="card">
-    <ul>
+
       <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
       </div>
@@ -112,10 +111,10 @@
           ut auctor diam scelerisque.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-    </ul>
+
   </div>
   <div class="card">
-    <ul>
+
       <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
       </div>
@@ -131,7 +130,7 @@
           ut auctor diam scelerisque.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-    </ul>
+
   </div>
 
 
