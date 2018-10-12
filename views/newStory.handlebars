@@ -1,11 +1,3 @@
-<!--Nav Bar-->
-<div id="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
-    <a class="navbar-brand" href="/">Stouiji Board</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -37,99 +29,18 @@
     </div>
   </nav>
 </div>
-
-<!--Ouiji Board Graphic-->
-<div class="ouiji">
-
-  <div class="module" id="module">
-    {{!-- <div class="headline">Stouiji Board</div> --}}
-
-  </div>
-</div>
 <div class="chalkboard">
   <!-- <h1>{{msg}}</h1> -->
   <h2>Welcome To StouijiBoard</h2>
 
   <hr>
  
-  {{#each entries}} {{> entries/story-block}} {{/each}}
+  {{#each entries}} 
+  {{id}}
+  {{title}}
+  {{/each}}
  
-  <div class="card">
-
-      <div class="card-header">
-        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
-          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
-          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
-          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
-          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
-          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
-          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
-          ut auctor diam scelerisque.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-  </div>
-  <div class="card">
-
-      <div class="card-header">
-        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
-          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
-          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
-          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
-          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
-          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
-          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
-          ut auctor diam scelerisque.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-  </div>
-  <div class="card">
-
-      <div class="card-header">
-        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
-          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
-          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
-          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
-          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
-          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
-          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
-          ut auctor diam scelerisque.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-  </div>
-  <div class="card">
-
-      <div class="card-header">
-        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
-          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
-          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
-          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
-          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
-          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
-          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
-          ut auctor diam scelerisque.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-  </div>
+  
 
 
 </div>

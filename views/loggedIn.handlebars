@@ -18,21 +18,18 @@
             Sort By...
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" id="recent" href="#">Most Recent</a>
-            <a class="dropdown-item" id="active" href="#">Most Active</a>
+            <a class="dropdown-item" href="#">Most Recent</a>
+            <a class="dropdown-item" href="#">Most Active</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" id="favorites" href="#">My Favorites</a>
-            <a class="dropdown-item" id="myPosts" href="#">My Posts</a>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
       </ul>
 
 
       <div class="form horiz">
-        <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#loginModal" data-toggle="modal"
-          id="loginBtn">Login</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#signupModal" data-toggle="modal"
-          id="signUpBtn">Sign Up!</button>
+        <button id="logout" class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#loginModal" data-toggle="modal"
+          id="loginBtn">Log Out</button>
       </div>
     </div>
   </nav>
@@ -42,39 +39,24 @@
 <div class="ouiji">
 
   <div class="module" id="module">
-    {{!-- <div class="headline">Stouiji Board</div> --}}
+    <div class="headline">Stouiji Board</div>
 
   </div>
 </div>
 <div class="chalkboard">
   <!-- <h1>{{msg}}</h1> -->
-  <h2>Welcome To StouijiBoard</h2>
+  <h2>Welcome To StouijiBoard!</h2>
 
   <hr>
- 
-  {{#each entries}} {{> entries/story-block}} {{/each}}
- 
+
+
   <div class="card">
-
-      <div class="card-header">
-        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
-          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
-          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
-          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
-          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
-          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
-          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
-          ut auctor diam scelerisque.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
+    <ul>
+      {{#each entries}} {{> entries/story-block}} {{/each}}
+    </ul>
   </div>
   <div class="card">
-
+    <ul>
       <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
       </div>
@@ -90,10 +72,10 @@
           ut auctor diam scelerisque.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-
+    </ul>
   </div>
   <div class="card">
-
+    <ul>
       <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
       </div>
@@ -109,10 +91,10 @@
           ut auctor diam scelerisque.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-
+    </ul>
   </div>
   <div class="card">
-
+    <ul>
       <div class="card-header">
         Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
       </div>
@@ -128,7 +110,26 @@
           ut auctor diam scelerisque.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-
+    </ul>
+  </div>
+  <div class="card">
+    <ul>
+      <div class="card-header">
+        Created by: xxxxx, created on: xxxxxx, Number of posts: xxxxx, last contributed: xxxxxxx
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Now Is The Time For All Good Men To Come To The Aid Of Their Country</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum lectus a nibh eleifend, eu pharetra lectus
+          tempor. In auctor fringilla dolor eleifend lobortis. Morbi mollis dui mauris, at accumsan lorem ultricies vel.
+          Sed sagittis ultricies ultrices. Mauris aliquam et arcu vel efficitur. Nunc eget ultrices purus, eget venenatis
+          diam. Duis aliquet cursus vulputate. Ut elementum euismod lectus, eget euismod tortor feugiat eu. Sed ut porttitor
+          dolor. Pellentesque pretium libero sit amet ligula semper, nec venenatis dui commodo. Proin commodo, nisl eget
+          pulvinar gravida, magna nisl blandit nibh, quis dapibus dui ipsum in erat. Etiam fermentum quam ac ex venenatis,
+          ac tincidunt tellus commodo. Duis facilisis nisl sit amet egestas pharetra. Donec vestibulum ante et massa varius,
+          ut auctor diam scelerisque.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </ul>
   </div>
 
 
@@ -166,7 +167,7 @@
                     <h6>Set the contribution rule for your story:</h6>
                     <div class="form-group">
                       <select class="form-control form-control-lg" id="questionOne">
-                        <option id="bannerOption" selected>Choose a word contribution limit</option>
+                        <option selected>Choose a word contribution limit</option>
                         
                       </select>
                     </div>
@@ -190,7 +191,7 @@
   </div>
 </div>
 
-{{!-- Sign In Modal --}}
+Sign In Modal
 <br>
 <div class="container">
   <div class="row">
