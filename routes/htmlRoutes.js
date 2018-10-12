@@ -1,10 +1,15 @@
+var db = require("../models");
+
 module.exports = function(app) {
-  // Load index page
+  // Get most recent (default setting)
   app.get("/", function(req, res) {
-    if (req.user) {
-      console.log(req.user);
-    }
-    res.render("index");
+    db.Entries.findAll({}).then(function(data) {
+      var hbsObject = {
+        entries: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
+    });
   });
 
   // Render 404 page for any unmatched routes
