@@ -29,25 +29,8 @@ $(document).ready(function() {
       password: password
     })
       .then(function() {
-        //  window.location.replace(data);
-        // Put this code after user first log in
-
-        $(window).load(function() {
-          sessionStorage.setItem("status", "loggedIn");
-        });
-
-        // When ever user clicks a link you can check like
-
-        if (sessionStorage.getItem("status") !== null) {
-          //redirect to page
-          console.log("you are logged in");
-        } else {
-          //show validation message
-          console.log("you are not logged in");
-        }
-        console.log("You are logged in");
-        location.reload();
-        // If there's an error, log the error
+        console.log("you made it");
+        window.location.replace("/loggedIn");
       })
       .catch(function(err) {
         console.log(err);

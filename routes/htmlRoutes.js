@@ -33,7 +33,9 @@ module.exports = function(app) {
       res.render("newStory", hbsObject);
     });
   });
-
+  app.get("/loggedIn", function(req, res) {
+    res.render("loggedIn");
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
