@@ -1,7 +1,6 @@
 $(document).ready(function () {
-
-
-    $("#questionOne").append(`<option class="limitChoice" value="1">1 word limit</option>`)
+    //make the limit choice menu
+    $("#questionOne").append(`<option class="limitChoice" value="1">1 word limit</option>`);
     for (var i = 5; i < 26; i = i + 5) {
         $("#questionOne").append(`<option class="limitChoice" value="${i}">${i} word limit</option>`);
     }
@@ -14,31 +13,11 @@ $(document).ready(function () {
         $("#questionOne").append(`<option class="limitChoice" value="${i}">${i} word limit</option>`);
     }
 
-    const el = document.querySelector("#module");
-
-
-    el.addEventListener("mousemove", (e) => {
-        el.style.backgroundPositionX = -e.offsetX / 100 + "px";
-        el.style.backgroundPositionY = -e.offsetY / 50 + "px";
-    });
-
-    var word = 0;
-
-    //show word limit options
-    $(document).on("change", "#questionOne", function (event) {
-        event.preventDefault();
-        word = $("#questionOne option:selected").attr("value");
-        console.log(word);
-        console.log("Hello World");
-
-
-    })
-
     //random quote generator
     $(document).on("click", "#randomGen", function (e) {
         e.preventDefault();
         $.ajax({
-            url: "https://www.ineedaprompt.com/dictionary/default/prompt?q=adj+noun+adv+verb+noun+location",
+            url: "https://www.ineedaprompt.com/dictionary/default/prompt?q=adj+noun+verb",
             method: "GET"
         }).then(function (response) {
             console.log(response.english);
@@ -50,4 +29,29 @@ $(document).ready(function () {
 
     })
 
+<<<<<<< HEAD
+=======
+    //open up card in new window to edit.
+    $(document).on("click", ".card", function (e) {
+        e.preventDefault();
+        var storyID = this.id;
+        // var story = {};
+        // story.prompt = this.children[1].children[0].innerHTML;
+        // story.text = this.children[1].children[1].innerHTML;
+        // story.id = this.id;
+
+        console.log(storyID);
+        url = `/story/${storyID}`;
+        console.log(url);
+        // $.ajax({
+        //         url: url,
+        //         method: "GET",
+        //     })
+        //     .then(function (resp) {
+                // console.log(resp);
+                window.location = url;
+                console.log("wtf is wrong")
+            // })
+    })
+>>>>>>> master
 })

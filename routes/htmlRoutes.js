@@ -19,6 +19,21 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/story/:id", function(req, res) {
+    db.Entries.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      // console.log("Data: " + Array.from(data));
+      var hbsObject = {
+        entries: data
+      };
+      // console.log(hbsObject);
+      res.render("newStory", hbsObject);
+    });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
