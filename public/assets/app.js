@@ -29,8 +29,6 @@ $(document).ready(function () {
 
     })
 
-<<<<<<< HEAD
-=======
     //open up card in new window to edit.
     $(document).on("click", ".card", function (e) {
         e.preventDefault();
@@ -53,5 +51,4 @@ $(document).ready(function () {
                 console.log("wtf is wrong")
             // })
     })
->>>>>>> master
 })

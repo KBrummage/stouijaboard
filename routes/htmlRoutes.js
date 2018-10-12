@@ -14,7 +14,7 @@ module.exports = function(app) {
       var hbsObject = {
         entries: data
       };
-      //console.log(hbsObject);
+      console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
