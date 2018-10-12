@@ -1,6 +1,6 @@
 <div class="card">
       <div class="card-header">
-            Created by: {{email}}, Created on: {{createdAt}}, Last contributed: {{updatedAt}}
+            Created by: {{#each users}}{{email}}{{/each}}, Created on: {{createdAt}}, Last contributed: {{updatedAt}}
       </div>
       <div class="card-body">
             <h4 class="card-title">{{title}}</h4>
