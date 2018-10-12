@@ -3,16 +3,6 @@ var passport = require("../config/passport");
 require("express");
 
 module.exports = function(app) {
-  // Get most recent (default setting)
-  app.get("/api/entries", function(req, res) {
-    db.Entries.findAll({}).then(function(data) {
-      var hbsObject = {
-        entries: data
-      };
-      console.log(hbsObject);
-      res.render("index", hbsObject);
-    });
-  });
   // Login User
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.

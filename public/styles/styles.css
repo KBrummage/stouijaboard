@@ -6,6 +6,13 @@
       border: 1px red solid;
   } */
   
+  *{
+    font-family: 'Vollkorn SC', serif;
+  }
+
+  h2{
+    text-align: center;
+  }
   .mainContainer{
     display: flex;
     flex-direction: column;
@@ -23,6 +30,21 @@
     display: flex;
     margin: 4%;
     padding: 0 0 2% 0;
+  }
+
+  .card-header{
+    font-family: 'Cormorant Unicase', serif;
+    text-align: right;
+  }
+
+  .card-text{
+    font-family: 'Alice', serif;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .card-footer{
+    display: hidden!important;
   }
   .container{
     display: flex;
@@ -52,7 +74,9 @@
     background-image: url("/assets/OuijiBoard.jpg")
   }
   
-  
+  #questionOne, #rndmPrmptFld, #storyText{
+    font-family: 'Alice', serif;
+  }
   .module {
     display: flex;
     color: red;
@@ -69,4 +93,6 @@
 
   }
 
- 
+  /* font-family: 'Cormorant Unicase', serif;
+  font-family: 'Vollkorn SC', serif;
+  font-family: 'Alice', serif; */
