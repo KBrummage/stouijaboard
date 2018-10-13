@@ -49,4 +49,4 @@ db.sequelize.sync().then(function() {
   });
 });
 
-// module.exports = app;
+module.exports = app;

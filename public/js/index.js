@@ -1,4 +1,5 @@
 $(function() {
+  // Function to create a new story in the "New Story" modal
   $("#newSubmit").on("click", function(event) {
     event.preventDefault();
     var newTitle = $("#rndmPrmptFld")
@@ -11,7 +12,7 @@ $(function() {
     if (newTitle !== "") {
       var newStory = {
         title: newTitle,
-        // author: author,
+        // user: getUsers,
         entry: newEntry
       };
 
@@ -39,6 +40,7 @@ $("#recent").on("click", function(e) {
 // Add new story line to the selected story
 $(".updateStory").on("click", function(event) {
   event.preventDefault();
+
   var id = $(this).data("id");
   var origEntry = $(".entry").text();
   console.log(origEntry);
@@ -50,11 +52,19 @@ $(".updateStory").on("click", function(event) {
       .trim();
   console.log(contEntry);
   console.log(id);
+
+
+
+
   var storyStatus = {
     entry: contEntry
   };
 
+
   $.ajax("/api/contribution/" + id, {
+
+ 
+
     type: "PUT",
     data: storyStatus
   }).then(function() {

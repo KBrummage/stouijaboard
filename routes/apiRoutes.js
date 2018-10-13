@@ -44,15 +44,10 @@ module.exports = function(app) {
     }
   });
 
-  // Get most popular
-
-  // Find a specific author
-
   // Create a new story
   app.post("/api/entries", function(req, res) {
     db.Entries.create({
       title: req.body.title,
-      author: req.body.author,
       entry: req.body.entry
     }).then(function(dbStory) {
       res.json({ id: dbStory.insertId });
@@ -66,14 +61,19 @@ module.exports = function(app) {
         entry: req.body.entry
       },
       {
-        // isNewRecord: true,
+
+
+        isNewRecord: true,
+
         where: {
           id: req.params.id
         }
       }
     )
       .then(function(updatedStory) {
+
         console.log(updatedStory);
+
         res.json(updatedStory);
       })
       .catch(err);
