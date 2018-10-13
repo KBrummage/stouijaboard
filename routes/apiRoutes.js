@@ -61,14 +61,19 @@ module.exports = function(app) {
         entry: req.body.entry
       },
       {
+
+
         isNewRecord: true,
+
         where: {
           id: req.params.id
         }
       }
     )
       .then(function(updatedStory) {
-        // console.log("apiRoutes.js line 75");
+
+        console.log(updatedStory);
+
         res.json(updatedStory);
       })
       .catch(err);
