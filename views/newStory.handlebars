@@ -37,13 +37,18 @@
 
   {{#each entries}} 
   <h2>{{title}}</h2>
-  <p>{{entry}}</p>
-  {{/each}}
+
+  <p class = "entry">{{entry}}</p>
+
   <form>
     <div class="form-group">
       <textarea type="text" class="form-control" id="contributeText" cols="50" rows="2" placeholder="Story Continued"></textarea>
     </div>
     <button class="updateStory btn btn-info" data-id="{{id}}">Contribute!</button>
+
+      {{/each}}
+
+
   </form>
 
 {{!-- New Story Modal --}}

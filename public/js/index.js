@@ -40,15 +40,24 @@ $("#recent").on("click", function(e) {
 // Add new story line to the selected story
 $(".updateStory").on("click", function(event) {
   event.preventDefault();
-  var contEntry = $("#contributeText")
-    .val()
-    .trim();
+
+  var id = $(this).data("id");
+  var origEntry = $(".entry").text();
+  console.log(origEntry);
+  var contEntry =
+    origEntry +
+    "  " +
+    $("#contributeText")
+      .val()
+      .trim();
+  console.log(contEntry);
+  console.log(id);
 
   var storyStatus = {
     entry: contEntry
   };
 
-  $.ajax("/api/contribution/:id", {
+  $.ajax("/api/contribution/" + id, {
     type: "PUT",
     data: storyStatus
   }).then(function() {
