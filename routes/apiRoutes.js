@@ -58,4 +58,41 @@ module.exports = function(app) {
       res.json({ id: dbStory.insertId });
     });
   });
+
+  // Add a line to an existing story
+  app.put("/api/contribution/:id", function(req, res, err) {
+    db.Entries.update(
+      {
+        entry: req.body.entry
+      },
+      {
+        // isNewRecord: true,
+        where: {
+          id: req.params.id
+        }
+      }
+    )
+      .then(function(updatedStory) {
+        console.log(updatedStory);
+        res.json(updatedStory);
+      })
+      .catch(err);
+  });
+
+  app.get("/api/users", function(req, res) {
+    db.User.findAll({ include: [db.Entries] }).then(function(data) {
+      res.json(data);
+    });
+  });
+
+  app.get("/api/users/:id", function(req, res) {
+    db.User.findAll({
+      include: [db.Entries],
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data);
+    });
+  });
 };
