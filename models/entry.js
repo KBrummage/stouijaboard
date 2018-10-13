@@ -15,7 +15,8 @@ module.exports = function(sequelize, DataTypes) {
 
   Entries.associate = function(models) {
     Entries.belongsTo(models.User, {
-      onDelete: "cascade"
+      targetKey: models.User.id,
+      foreignKey: models.User.id
     });
   };
 
