@@ -3,10 +3,6 @@ var passport = require("../config/passport");
 require("express");
 
 module.exports = function(app) {
-<<<<<<< HEAD
- 
-=======
->>>>>>> master
   // Login User
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -48,18 +44,52 @@ module.exports = function(app) {
     }
   });
 
-  // Get most popular
-
-  // Find a specific author
-
   // Create a new story
   app.post("/api/entries", function(req, res) {
     db.Entries.create({
       title: req.body.title,
-      author: req.body.author,
       entry: req.body.entry
     }).then(function(dbStory) {
       res.json({ id: dbStory.insertId });
+    });
+  });
+
+  // Add a line to an existing story
+  app.put("/api/contribution/:id", function(req, res, err) {
+    db.Entries.update(
+      {
+        entry: req.body.entry
+      },
+      {
+        isNewRecord: true,
+
+        where: {
+          id: req.params.id
+        }
+      }
+    )
+      .then(function(updatedStory) {
+        console.log(updatedStory);
+
+        res.json(updatedStory);
+      })
+      .catch(err);
+  });
+
+  app.get("/api/users", function(req, res) {
+    db.User.findAll({ include: [db.Entries] }).then(function(data) {
+      res.json(data);
+    });
+  });
+
+  app.get("/api/users/:id", function(req, res) {
+    db.User.findAll({
+      include: [db.Entries],
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data);
     });
   });
 };

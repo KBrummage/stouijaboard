@@ -32,18 +32,24 @@
 <div class="chalkboard">
   <!-- <h1>{{msg}}</h1> -->
   <h2>Welcome To StouijiBoard</h2>
-
-  <hr>
- 
-  {{#each entries}} 
-  {{id}}
-  {{title}}
-  {{/each}}
- 
-  
-
-
 </div>
+  <hr>
+
+  {{#each entries}} 
+  <h2>{{title}}</h2>
+
+  <p class = "entry">{{entry}}</p>
+
+  <form>
+    <div class="form-group">
+      <textarea type="text" class="form-control" id="contributeText" cols="50" rows="2" placeholder="Story Continued"></textarea>
+    </div>
+    <button class="updateStory btn btn-info" data-id="{{id}}">Contribute!</button>
+
+      {{/each}}
+
+
+  </form>
 
 {{!-- New Story Modal --}}
 <br>

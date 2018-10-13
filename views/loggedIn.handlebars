@@ -21,15 +21,17 @@
             <a class="dropdown-item" href="#">Most Recent</a>
             <a class="dropdown-item" href="#">Most Active</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" id="favorites" href="#">My Favorites</a>
+            <a class="dropdown-item" id="myPosts" href="#">My Posts</a>
           </div>
         </li>
       </ul>
 
-
-      <div class="form horiz">
-        <button id="logout" class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#loginModal" data-toggle="modal"
-          id="loginBtn">Log Out</button>
+      
+      <div class="member-name"></div>
+      
+      <div class="logout">
+        <a href="/logout" class="nav-link btn btn-outline-success my-2 my-sm-0" tabindex"-1" role="button" >Log Out</a>
       </div>
     </div>
   </nav>
@@ -48,13 +50,9 @@
   <h2>Welcome To StouijiBoard!</h2>
 
   <hr>
-
-
-  <div class="card">
-    <ul>
-      {{#each entries}} {{> entries/story-block}} {{/each}}
-    </ul>
-  </div>
+  
+  {{#each entries}} {{> entries/story-block}} {{/each}}
+    
   <div class="card">
     <ul>
       <div class="card-header">
@@ -184,122 +182,6 @@
               <!-- ++++++++++++++++++++++++++++++++++++++++ -->
             </div>
             
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-Sign In Modal
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="modal fade" data-keyboard="false" data-backdrop="static" id="loginModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" modal-lg role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Sign In</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="col-12">
-                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-                <h3>Please Login</h3>
-                <br>
-                <form class="login">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="emailInput" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" autocomplet="current-password" class="form-control" id="passwordInput" placeholder="Password">
-                </div>
-                <!--<div class="checkbox">
-                    <label>
-                      <input type="checkbox"> Remember Me
-                    </label>
-                  </div>-->
-                  <button type="submit" class="btn btn-primary form-control">Login</button>
-                </form>
-                <br>
-                <!--<p>Or sign up
-                  <a href="/">here</a>
-                </p>-->
-                </form>
-              </div>
-              <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-{{!-- Sign Up Modal --}}
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="modal fade" data-keyboard="false" data-backdrop="static" id="signupModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" modal-lg role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Sign Up</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <div class="modal-body">
-              <div class="col-12">
-                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-                <h3>Sign Up Form</h3>
-                <br>
-                <form class="signup">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="newUserEmail" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" autocomplete="new-password" class="form-control" id="newUserPassword" placeholder="Password">
-                </div>
-                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error:</span> <span class="msg"></span>
-                </div>
-                <!--<div class="checkbox">
-                    <label>
-                      <input type="checkbox"> Remember Me
-                    </label>
-                </div>-->
-                <button type="submit" class="btn btn-primary form-control">Sign Up</button>
-                  </form>
-                  <br>
-            <!--<p>Or log in <a href="/">here</a></p>-->
-                </div>
-                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-              </div>
-              <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-            </div>
-            <!--<div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>-->
           </div>
         </div>
       </div>
