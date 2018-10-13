@@ -53,18 +53,11 @@ $(".updateStory").on("click", function(event) {
   console.log(contEntry);
   console.log(id);
 
-
-
-
   var storyStatus = {
     entry: contEntry
   };
 
-
   $.ajax("/api/contribution/" + id, {
-
- 
-
     type: "PUT",
     data: storyStatus
   }).then(function() {

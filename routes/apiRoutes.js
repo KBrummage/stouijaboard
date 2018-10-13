@@ -61,8 +61,6 @@ module.exports = function(app) {
         entry: req.body.entry
       },
       {
-
-
         isNewRecord: true,
 
         where: {
@@ -71,7 +69,6 @@ module.exports = function(app) {
       }
     )
       .then(function(updatedStory) {
-
         console.log(updatedStory);
 
         res.json(updatedStory);
