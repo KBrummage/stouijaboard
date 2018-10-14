@@ -43,6 +43,10 @@ module.exports = function(app) {
       });
     }
   });
+  //handle favorite
+  app.post("/api/fav/:id", function(req, res) {
+    res.sendStatus(204);
+  });
 
   // Create a new story
   app.post("/api/entries", function(req, res) {

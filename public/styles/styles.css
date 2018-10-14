@@ -92,6 +92,11 @@
     align-self: center;
 
   }
+  
+  .far.fa-heart {
+    color: red;
+    
+  }
 
   /* font-family: 'Cormorant Unicase', serif;
   font-family: 'Vollkorn SC', serif;
