@@ -1,17 +1,19 @@
-$(document).ready(function() {
-  $(".far.fa-heart").on("click", solid);
-});
-
-function solid() {
+$(document).on("click", ".fa-heart", function() {
   var id = this.id;
   var heart = this;
-  $.post("/api/fav/" + id)
-    .then(function() {
-      $(heart)
-        .addClass("fas")
-        .removeClass("far");
-    })
-    .catch(function() {
-      console.log("unable to favorite");
-    });
-}
+  if ($(heart).hasClass("far")) {
+    $.post("/api/fav/" + id)
+      .then(function() {
+        $(heart)
+          .addClass("fas")
+          .removeClass("far");
+      })
+      .catch(function() {
+        console.log("unable to favorite");
+      });
+  } else {
+    $(heart)
+      .addClass("far")
+      .removeClass("fas");
+  }
+});

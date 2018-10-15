@@ -65,3 +65,9 @@ $(".updateStory").on("click", function(event) {
     location.reload();
   });
 });
+
+// Return to the main loggedIn page
+$(".return").on("click", function(event) {
+  event.preventDefault();
+  window.location.replace("/loggedIn");
+});

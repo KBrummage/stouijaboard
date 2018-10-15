@@ -43,10 +43,27 @@ module.exports = function(app) {
       });
     }
   });
-  //handle favorite
+  //handle favorite - add favorite
   app.post("/api/fav/:id", function(req, res) {
-    res.sendStatus(204);
+    db.User.update(
+      {
+        favorite: req.body.favorite
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    ).then(function(myFavorite) {
+      res.json(myFavorite);
+      // res.sendStatus(204);
+    });
   });
+
+  // // Remove favorite
+  // app.delete("/api/fav/:id", function(req, res) {
+  //   // if a story is favorited, this will delete it from "Favorites"
+  // });
 
   // Create a new story
   app.post("/api/entries", function(req, res) {
