@@ -48,6 +48,7 @@ $(document).ready(function () {
     $(document).on("click", ".contribute", function (e) {
         e.preventDefault();
         var storyID = this.id;
+        console.log(storyID);
         // var story = {};
         // story.prompt = this.children[1].children[0].innerHTML;
         // story.text = this.children[1].children[1].innerHTML;
