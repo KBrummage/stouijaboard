@@ -28,6 +28,8 @@ module.exports = function(app) {
         entries: data,
         users: data
       };
+
+      console.log(JSON.stringify(data) + "<-htmlRoutes32");
       res.render("loggedIn", hbsObject);
     });
   });
@@ -38,7 +40,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(data) {
-      // console.log("Data: " + Array.from(data));
+      console.log("Data: " + Array.from(data));
       var hbsObject = {
         entries: data
       };

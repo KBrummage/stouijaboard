@@ -98,6 +98,17 @@
     
   }
 
+  .curtain{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+  }
+
+  .curtain.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   /* font-family: 'Cormorant Unicase', serif;
   font-family: 'Vollkorn SC', serif;
   font-family: 'Alice', serif; */
