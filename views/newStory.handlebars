@@ -1,46 +1,46 @@
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <button class="btn btn-link pull-right" data-target="#storyModal" data-toggle="modal" style="color: gray">New Story</button>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Sort By...
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" id="recent" href="#">Most Recent</a>
-            <a class="dropdown-item" id="active" href="#">Most Active</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" id="favorites" href="#">My Favorites</a>
-            <a class="dropdown-item" id="myPosts" href="#">My Posts</a>
-          </div>
-        </li>
-      </ul>
-
-
-      <div class="form horiz">
-        <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#loginModal" data-toggle="modal"
-          id="loginBtn">Login</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#signupModal" data-toggle="modal"
-          id="signUpBtn">Sign Up!</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <button class="btn btn-link pull-right" data-target="#storyModal" data-toggle="modal" style="color: gray">New
+        Story</button>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Sort By...
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" id="recent" href="#">Most Recent</a>
+        <a class="dropdown-item" id="active" href="#">Most Active</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" id="favorites" href="#">My Favorites</a>
+        <a class="dropdown-item" id="myPosts" href="#">My Posts</a>
       </div>
-    </div>
-  </nav>
+    </li>
+  </ul>
+
+
+  <div class="form horiz">
+    <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#loginModal" data-toggle="modal"
+      id="loginBtn">Login</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-default" data-target="#signupModal" data-toggle="modal"
+      id="signUpBtn">Sign Up!</button>
+  </div>
+</div>
+</nav>
 </div>
 <div class="chalkboard">
   <!-- <h1>{{msg}}</h1> -->
   <h2>Welcome To StouijiBoard</h2>
 
   <hr>
- 
-  {{#each entries}} 
+
+  {{#each entries}}
   {{id}}
   {{title}}
   {{/each}}
- 
-  
+
+
 
 
 </div>
@@ -78,7 +78,7 @@
                     <div class="form-group">
                       <select class="form-control form-control-lg" id="questionOne">
                         <option id="bannerOption" selected>Choose a word contribution limit</option>
-                        
+
                       </select>
                     </div>
                   </div>
@@ -93,7 +93,7 @@
               </div>
               <!-- ++++++++++++++++++++++++++++++++++++++++ -->
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -127,9 +127,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" autocomplet="current-password" class="form-control" id="passwordInput" placeholder="Password">
-                </div>
-                <!--<div class="checkbox">
+                    <input type="password" autocomplet="current-password" class="form-control" id="passwordInput"
+                      placeholder="Password">
+                  </div>
+                  <!--<div class="checkbox">
                     <label>
                       <input type="checkbox"> Remember Me
                     </label>
@@ -179,42 +180,43 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="newUserEmail" placeholder="Email">
-                </div>
-                <div class="form-group">
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" autocomplete="new-password" class="form-control" id="newUserPassword" placeholder="Password">
-                </div>
-                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                    <input type="password" autocomplete="new-password" class="form-control" id="newUserPassword"
+                      placeholder="Password">
+                  </div>
+                  <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                     <span class="sr-only">Error:</span> <span class="msg"></span>
-                </div>
-                <!--<div class="checkbox">
+                  </div>
+                  <!--<div class="checkbox">
                     <label>
                       <input type="checkbox"> Remember Me
                     </label>
                 </div>-->
-                <button type="submit" class="btn btn-primary form-control">Sign Up</button>
-                  </form>
-                  <br>
-            <!--<p>Or log in <a href="/">here</a></p>-->
-                </div>
-                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                  <button type="submit" class="btn btn-primary form-control">Sign Up</button>
+                </form>
+                <br>
+                <!--<p>Or log in <a href="/">here</a></p>-->
               </div>
               <!-- ++++++++++++++++++++++++++++++++++++++++ -->
             </div>
-            <!--<div class="modal-footer">
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+            <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+          </div>
+          <!--<div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-primary">Save changes</button>
             </div>-->
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 {{!-- Script for Modals --}}
