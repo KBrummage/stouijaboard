@@ -71,3 +71,7 @@ $(".return").on("click", function(event) {
   event.preventDefault();
   window.location.replace("/loggedIn");
 });
+
+$(".form-control").on("click", function() {
+  $(".greeting").html("Hello!");
+});
