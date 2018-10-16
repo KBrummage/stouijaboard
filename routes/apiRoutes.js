@@ -101,20 +101,20 @@ module.exports = function(app) {
       .catch(err);
   });
 
-  app.get("/api/users", function(req, res) {
-    db.User.findAll({ include: [db.Entries] }).then(function(data) {
-      res.json(data);
-    });
-  });
+  //   app.get("/api/users", function(req, res) {
+  //     db.User.findAll({ include: [db.Entries] }).then(function(data) {
+  //       res.json(data);
+  //     });
+  //   });
 
-  app.get("/api/users/:id", function(req, res) {
-    db.User.findAll({
-      include: [db.Entries],
-      where: {
-        id: req.params.id
-      }
-    }).then(function(data) {
-      res.json(data);
-    });
-  });
+  //   app.get("/api/users/:id", function(req, res) {
+  //     db.User.findAll({
+  //       include: [db.Entries],
+  //       where: {
+  //         id: req.params.id
+  //       }
+  //     }).then(function(data) {
+  //       res.json(data);
+  //     });
+  //   });
 };
