@@ -18,11 +18,11 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    login: {
-      type: DataTypes.BOOLEAN,
-      default: false
     }
+    // login: {
+    //   type: DataTypes.BOOLEAN,
+    //   default: false
+    // }
   });
 
   User.prototype.validPassword = function(password) {
