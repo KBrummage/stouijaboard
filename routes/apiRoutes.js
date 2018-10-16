@@ -18,7 +18,8 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      login: true
     }).then(function(dbStory) {
       res.json({ id: dbStory.insertId });
     });
@@ -47,12 +48,15 @@ module.exports = function(app) {
   app.post("/api/fav/:id", function(req, res) {
     db.User.update(
       {
-        favorite: req.body.favorite
+        include: [db.Entries]
       },
       {
         where: {
           id: req.params.id
         }
+      },
+      {
+        favorite: req.body.favorite
       }
     ).then(function(myFavorite) {
       res.json(myFavorite);
