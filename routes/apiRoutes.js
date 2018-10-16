@@ -43,19 +43,74 @@ module.exports = function(app) {
       });
     }
   });
+  //handle favorite - add favorite
+  app.post("/api/fav/:id", function(req, res) {
+    db.User.update(
+      {
+        favorite: req.body.favorite
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    ).then(function(myFavorite) {
+      res.json(myFavorite);
+      // res.sendStatus(204);
+    });
+  });
 
-  // Get most popular
-
-  // Find a specific author
+  // // Remove favorite
+  // app.delete("/api/fav/:id", function(req, res) {
+  //   // if a story is favorited, this will delete it from "Favorites"
+  // });
 
   // Create a new story
   app.post("/api/entries", function(req, res) {
     db.Entries.create({
       title: req.body.title,
-      author: req.body.author,
       entry: req.body.entry
     }).then(function(dbStory) {
       res.json({ id: dbStory.insertId });
+    });
+  });
+
+  // Add a line to an existing story
+  app.put("/api/contribution/:id", function(req, res, err) {
+    db.Entries.update(
+      {
+        entry: req.body.entry
+      },
+      {
+        isNewRecord: true,
+
+        where: {
+          id: req.params.id
+        }
+      }
+    )
+      .then(function(updatedStory) {
+        console.log(updatedStory);
+
+        res.json(updatedStory);
+      })
+      .catch(err);
+  });
+
+  app.get("/api/users", function(req, res) {
+    db.User.findAll({ include: [db.Entries] }).then(function(data) {
+      res.json(data);
+    });
+  });
+
+  app.get("/api/users/:id", function(req, res) {
+    db.User.findAll({
+      include: [db.Entries],
+      where: {
+        id: req.params.id
+      }
+    }).then(function(data) {
+      res.json(data);
     });
   });
 };

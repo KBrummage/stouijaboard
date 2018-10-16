@@ -30,7 +30,7 @@ $(document).ready(function () {
     })
 
     //open up card in new window to edit.
-    $(document).on("click", ".card", function (e) {
+    $(document).on("click", ".contribute", function (e) {
         e.preventDefault();
         var storyID = this.id;
         // var story = {};
