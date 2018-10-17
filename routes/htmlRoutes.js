@@ -45,7 +45,7 @@ module.exports = function(app) {
         entries: data
       };
       // console.log(hbsObject);
-      res.render("newstory", hbsObject);
+      res.render("newStory", hbsObject);
     });
   });
 
