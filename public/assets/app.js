@@ -1,19 +1,4 @@
-    // var ScrollMagic = require('scrollmagic');
-
 $(document).ready(function () {
-
-        //init ScrollMagic
-        var controller = new ScrollMagic.Controller();
-
-        //build a scene
-        var firstScene = new ScrollMagic.Scene({
-            triggerElement: '#curtain1',
-
-        })
-        .setClassToggle("#curtain1", 'fade-in')
-        .addTo(controller);
-
-
     //make the limit choice menu
     $("#questionOne").append(`<option class="limitChoice" value="1">1 word limit</option>`);
     for (var i = 5; i < 26; i = i + 5) {
