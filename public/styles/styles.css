@@ -2,9 +2,9 @@
     line-height: 2.5;
   }
   
-  /* *{
+   /* *{
       border: 1px red solid;
-  } */
+  }  */
   
   *{
     font-family: 'Vollkorn SC', serif;
@@ -28,8 +28,11 @@
 
   .card{
     display: flex;
-    margin: 4%;
+    margin: 4% auto;
     padding: 0 0 2% 0;
+    width: 60%;
+    
+
   }
 
   .card-header{

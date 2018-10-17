@@ -1,23 +1,31 @@
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <button class="btn btn-link pull-right" data-target="#storyModal" data-toggle="modal" style="color: gray">New
-        Story</button>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Sort By...
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" id="recent" href="#">Most Recent</a>
-        <a class="dropdown-item" id="active" href="#">Most Active</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" id="favorites" href="#">My Favorites</a>
-        <a class="dropdown-item" id="myPosts" href="#">My Posts</a>
-      </div>
-    </li>
-  </ul>
+<!--Nav Bar-->
+<div id="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
+    <a class="navbar-brand" href="/">Stouiji Board</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <button class="btn btn-link pull-right" data-target="#storyModal" data-toggle="modal" style="color: gray">New Story</button>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Sort By...
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" id="recent" href="#">Most Recent</a>
+            <a class="dropdown-item" id="active" href="#">Most Active</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="favorites" href="#">My Favorites</a>
+            <a class="dropdown-item" id="myPosts" href="#">My Posts</a>
+          </div>
+        </li>
+      </ul>
 
 
   <div class="form horiz">
@@ -29,34 +37,40 @@
 </div>
 </nav>
 </div>
+
+
 <div class="chalkboard">
   <!-- <h1>{{msg}}</h1> -->
-  <h2>Welcome To StouijiBoard</h2>
-</div>
-  <hr>
+  <h2>StouijaBoard</h2>
 
-  {{#each entries}}
-  {{id}}
-  {{title}}
-  {{/each}}
+  <hr> {{#each entries}}
 
 
-
-  <p class = "entry">{{entry}}</p>
-
-  <form>
-    <div class="form-group">
-      <textarea type="text" class="form-control" id="contributeText" cols="50" rows="2" placeholder="Story Continued"></textarea>
+  <div class="card" id="{{id}}">
+    <div class="card-header">
+      <h2>{{title}}</h2>
     </div>
-    <button class="updateStory btn btn-info" data-id="{{id}}">Contribute!</button>
+    <div class="card-body">
+      <p class="entry">{{entry}}</p>
 
+      <form>
+        <div class="form-group">
+          <textarea type="text" class="form-control" id="contributeText" cols="50" rows="2" placeholder="Story Continued"></textarea>
+        </div>
+      </form>
+      <button class="updateStory btn btn-info" data-id="{{id}}">Contribute!</button>
+      <span>
+        <i class="far fa-heart" id="{{id}}"></i>
+      </span>
+    </div>
+  </div>
   {{/each}}
-    <button class="return btn btn-secondary">Return to Main</button>
-  </form>
-  
+  <button class="return btn btn-secondary">Return to Main</button>
+</div>
+
 
 {{!-- New Story Modal --}}
-<br>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -112,7 +126,7 @@
 </div>
 
 {{!-- Sign In Modal --}}
-<br>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -137,8 +151,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" autocomplet="current-password" class="form-control" id="passwordInput"
-                      placeholder="Password">
+                    <input type="password" autocomplet="current-password" class="form-control" id="passwordInput" placeholder="Password">
                   </div>
                   <!--<div class="checkbox">
                     <label>
@@ -193,12 +206,12 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" autocomplete="new-password" class="form-control" id="newUserPassword"
-                      placeholder="Password">
+                    <input type="password" autocomplete="new-password" class="form-control" id="newUserPassword" placeholder="Password">
                   </div>
                   <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error:</span> <span class="msg"></span>
+                    <span class="sr-only">Error:</span>
+                    <span class="msg"></span>
                   </div>
                   <!--<div class="checkbox">
                     <label>
@@ -229,6 +242,7 @@
 </div>
 </div>
 
+
 {{!-- Script for Modals --}}
 <script>
   $('#myModal').on('shown.bs.modal', function () {
@@ -237,6 +251,8 @@
 </script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-<script src="/js/signup.js"></script>
-<script src="/js/login.js"></script>
+<script src="/public/js/favorites.js"></script>
+<script src="/public/js/index.js"></script>
+<script src="/public/js/login.js"></script>
+<script src="/public/js/member.js"></script>
+<script src="/public/js/signup.js"></script>
