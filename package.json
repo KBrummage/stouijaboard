@@ -1,5 +1,5 @@
 {
-  "name": "handlebars-boilerplate",
+  "name": "node-handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -23,7 +23,6 @@
     "nodemon": "^1.18.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "scrollmagic": "^2.0.6",
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
